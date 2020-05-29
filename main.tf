@@ -1,3 +1,10 @@
+/**
+ * # ![Digital Ocean](do-logo.png) Firewall
+ *
+ * Purpose: Provision Firewall in Digital Ocean.
+ *
+ * Rationale: Provide templates for Digital Ocean Firewalls.
+ */
 resource "digitalocean_firewall" "firewall" {
   name = var.name
 
