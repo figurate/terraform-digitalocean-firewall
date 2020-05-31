@@ -3,6 +3,6 @@ module "firewall" {
 
   name          = var.name
   tags          = var.tags
-  ingress_rules = ["http-80-tcp"]
+  ingress_rules = ["ssh-22-tcp"]
   egress_rules  = ["all-tcp"]
 }

@@ -12,11 +12,14 @@ clean:
 test:
 	$(TERRAFORM) init && $(TERRAFORM) validate && \
 		$(TERRAFORM) init modules/http-80-tcp && $(TERRAFORM) validate modules/http-80-tcp
+		$(TERRAFORM) init modules/ssh-22-tcp && $(TERRAFORM) validate modules/ssh-22-tcp
 
 docs:
 	docker run --rm -v "${PWD}:/work" tmknom/terraform-docs markdown ./ >./README.md && \
 		docker run --rm -v "${PWD}:/work" tmknom/terraform-docs markdown ./modules/http-80-tcp >./modules/http-80-tcp/README.md
+		docker run --rm -v "${PWD}:/work" tmknom/terraform-docs markdown ./modules/ssh-22-tcp >./modules/ssh-22-tcp/README.md
 
 format:
 	$(TERRAFORM) fmt -list=true ./ && \
 		$(TERRAFORM) fmt -list=true ./modules/http-80-tcp
+		$(TERRAFORM) fmt -list=true ./modules/ssh-22-tcp

@@ -7,6 +7,7 @@
  */
 resource "digitalocean_firewall" "firewall" {
   name = var.name
+  tags = var.tags
 
   dynamic "inbound_rule" {
     for_each = var.ingress_rules

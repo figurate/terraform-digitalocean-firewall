@@ -21,6 +21,7 @@ No requirements.
 | egress\_rules | A list of predefined rules for egress traffic | `list(string)` | `[]` | no |
 | ingress\_rules | A list of predefined rules for ingress traffic | `list(string)` | `[]` | no |
 | name | Name of the firewall configuration | `any` | n/a | yes |
+| tags | A list of tags attached to the firewall | `list(string)` | `[]` | no |
 
 ## Outputs
 
