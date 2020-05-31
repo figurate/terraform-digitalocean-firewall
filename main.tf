@@ -14,6 +14,7 @@ resource "digitalocean_firewall" "firewall" {
     content {
       port_range = format("%s-%s", local.rules[inbound_rule.value][0], local.rules[inbound_rule.value][1])
       protocol   = local.rules[inbound_rule.value][2]
+
     }
   }
 

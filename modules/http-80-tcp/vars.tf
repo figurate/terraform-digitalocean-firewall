@@ -7,3 +7,13 @@ variable "tags" {
   type        = list(string)
   default     = []
 }
+
+variable "source_addresses" {
+  description = "A list of tags from which ingress traffic may originate"
+  default     = null
+}
+
+variable "source_tags" {
+  description = "A list of tags from which ingress traffic may originate"
+  default     = null
+}
