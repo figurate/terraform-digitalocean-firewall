@@ -17,3 +17,9 @@ variable "source_tags" {
   description = "A list of tags from which ingress traffic may originate"
   default     = null
 }
+
+variable "egress_rules" {
+  description = "A list of predefined rules for egress traffic"
+  type        = list(string)
+  default     = ["all-tcp", "all-udp"]
+}

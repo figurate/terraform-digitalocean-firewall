@@ -6,5 +6,5 @@ module "firewall" {
   ingress_rules    = ["http-80-tcp"]
   source_addresses = var.source_addresses
   source_tags      = var.source_tags
-  egress_rules     = ["all-tcp"]
+  egress_rules     = var.egress_rules
 }

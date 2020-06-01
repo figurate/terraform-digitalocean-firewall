@@ -1,6 +1,7 @@
 locals {
   rules = {
     all-tcp = [1, 65535, "tcp", "ALL (TCP)"]
+    all-udp = [1, 65535, "udp", "ALL (UDP)"]
 
     http-80-tcp   = [80, 80, "tcp", "HTTP"]
     http-8080-tcp = [8080, 8080, "tcp", "HTTP"]
@@ -18,10 +19,13 @@ locals {
     nfs-2049-tcp = [2049, 2049, "tcp", "NFS (TCP)"]
 
     ipsec-4500-udp = [4500, 4500, "udp", "IPSEC NAT (UDP)"]
-    ipsec-500-udp = [500, 500, "udp", "IPSEC IKE (UDP)"]
+    ipsec-500-udp  = [500, 500, "udp", "IPSEC IKE (UDP)"]
 
     l2tp-1701-udp = [1701, 1701, "udp", "L2TP (UDP)"]
 
     squid-proxy-3128-tcp = [3128, 3128, "tcp", "Squid Proxy (TCP)"]
+
+    rdp-3389-tcp = [3389, 3389, "tcp", "Remote Desktop (TCP)"]
+    rdp-3389-udp = [3389, 3389, "udp", "Remote Desktop (UDP)"]
   }
 }
