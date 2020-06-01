@@ -12,5 +12,16 @@ locals {
 
     dns-53-tcp = [53, 53, "tcp", "DNS (TCP)"]
     dns-53-udp = [53, 53, "udp", "DNS (UDP)"]
+
+    ntp-123-udp = [123, 123, "udp", "NTP (UDP)"]
+
+    nfs-2049-tcp = [2049, 2049, "tcp", "NFS (TCP)"]
+
+    ipsec-4500-udp = [4500, 4500, "udp", "IPSEC NAT (UDP)"]
+    ipsec-500-udp = [500, 500, "udp", "IPSEC IKE (UDP)"]
+
+    l2tp-1701-udp = [1701, 1701, "udp", "L2TP (UDP)"]
+
+    squid-proxy-3128-tcp = [3128, 3128, "tcp", "Squid Proxy (TCP)"]
   }
 }
