@@ -10,9 +10,9 @@ clean:
 
 validate:
 	$(TERRAFORM) init && $(TERRAFORM) validate && \
-		$(TERRAFORM) init modules/http-80-tcp && $(TERRAFORM) validate modules/http-80-tcp && \
-		$(TERRAFORM) init modules/http-443-tcp && $(TERRAFORM) validate modules/http-443-tcp && \
-		$(TERRAFORM) init modules/ssh-22-tcp && $(TERRAFORM) validate modules/ssh-22-tcp
+		$(TERRAFORM) -chdir=modules/http-80-tcp init && $(TERRAFORM) -chdir=modules/http-80-tcp validate && \
+		$(TERRAFORM) -chdir=modules/http-443-tcp init && $(TERRAFORM) -chdir=modules/http-443-tcp validate && \
+		$(TERRAFORM) -chdir=modules/ssh-22-tcp init && $(TERRAFORM) -chdir=modules/ssh-22-tcp validate
 
 test: validate
 	$(CHECKOV) -d /work
