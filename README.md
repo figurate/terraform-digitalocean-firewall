@@ -1,5 +1,7 @@
 # ![Digital Ocean](do-logo.png) Firewall
 
+[![CI](https://github.com/figurate/terraform-digitalocean-firewall/actions/workflows/main.yml/badge.svg)](https://github.com/figurate/terraform-digitalocean-firewall/actions/workflows/main.yml)
+
 Purpose: Provision Firewall in Digital Ocean.
 
 Rationale: Provide templates for Digital Ocean Firewalls.
